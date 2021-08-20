@@ -1,0 +1,36 @@
+div:hover{
+    border: 1px solid red
+}
+
+.a{
+    color: cyan
+}
+.b{
+    color:blue
+}
+.c{
+    color:cornflowerblue;
+    font-size: 30px;
+}
+.d{
+    color:darkslateblue
+}
+.e{
+    color:lightskyblue
+}
+
+.a h3{
+    background-color: red;
+}
+.b h3{
+    font-family: monospace;
+}
+.c h3{
+    font-weight: inherit
+}
+.d h3{
+    background-color: lightblue;
+}
+.e h3{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
