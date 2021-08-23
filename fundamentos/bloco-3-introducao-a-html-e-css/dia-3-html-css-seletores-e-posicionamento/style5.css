@@ -27,14 +27,14 @@ a {
     text-decoration: none;
     color: black
 }
-/*
-.linguagem li:nth-child(1, 2){
+
+.linguagem li:nth-child(-n+3){
     color: blue;
 }
 
-.linguagem li:lang(Ja){
-    color: brown;
-}*/
+.java{
+    background-color: pink;
+}
 }
 a[href*="stackoverflow"]:hover{
     font-weight: bold;
