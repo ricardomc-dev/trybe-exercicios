@@ -94,10 +94,10 @@
         function textConsole(tag) {
             let texto = document.getElementsByTagName(tag);
             for (let i = 0; i < texto.length; i += 1){
-                console.log(texto[i])
+                console.log(texto[i].innerText)
             }
         }
-        textConsole();
+        textConsole('p');
         
     </script>
   </body>
