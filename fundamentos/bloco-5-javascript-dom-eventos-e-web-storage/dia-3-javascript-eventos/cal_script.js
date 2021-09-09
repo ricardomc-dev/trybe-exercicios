@@ -25,9 +25,9 @@ function createDaysOfDecember() {
         dayItem.innerHTML = dezDays;
         getDaysList.appendChild(dayItem);
 
-        if (dezDays === 24 | dezDays === 31) {
+        if (dezDays === 24 || dezDays === 31) {
             dayItem.className = 'day holiday';
-        } else if (dezDays === 4 | dezDays === 11 | dezDays === 18) {
+        } else if (dezDays === 4 || dezDays === 11 || dezDays === 18) {
             dayItem.className = 'day friday';
         } else if (dezDays === 25) {
             dayItem.className = 'day holiday friday';
@@ -94,3 +94,17 @@ function displayFridays(){
 }
 displayFridays();
 
+// Exercício 6:
+function changeTextSize () {
+    const dayList = document.querySelectorAll('.day');
+    for (let index = 0; index < dayList.length; index += 1) {
+        dayList[index].addEventListener('mouseover', function(event) {
+            event.target.style.fontSize = '2em';
+
+        })
+        dayList[index].addEventListener('mouseleave', function(event) {
+            event.target.style.fontSize = 'unset';
+        })
+    }
+}
+changeTextSize()
