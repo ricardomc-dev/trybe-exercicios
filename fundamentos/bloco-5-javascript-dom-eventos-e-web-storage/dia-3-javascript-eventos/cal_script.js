@@ -66,7 +66,31 @@ function displayHolidays(){
 }
 displayHolidays();
 
+// Exercício 4:
+function fridayButton(string) {
+    let createFridayButton = document.createElement('button');
+    createFridayButton.innerHTML = string;
+    createFridayButton.id = 'btn-friday';
+    document.querySelector('.buttons-container').appendChild(createFridayButton);
+}
+fridayButton('Sexta-Feira');
 
-
-
+// Exercício 5:
+function displayFridays(){
+    let getFridayButton = document.querySelector('#btn-friday');
+    let getFridays = document.querySelectorAll('.friday');
+    let setText = '#Sextou';
+    let fridaysArray = [];
+    for (let i = 0; i < getFridays.length; i += 1){
+        fridaysArray.push(getFridays[i].innerHTML);
+    }
+    getFridayButton.addEventListener('click', function() {
+        for (let i = 0; i < getFridays.length; i += 1) {
+            if (getFridays[i].innerHTML === setText) {
+                getFridays[i].innerHTML = fridaysArray[i];
+            } else (getFridays[i].innerHTML = setText)
+        }
+    })
+}
+displayFridays();
 
