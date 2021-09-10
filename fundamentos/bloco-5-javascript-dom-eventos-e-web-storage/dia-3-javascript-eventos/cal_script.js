@@ -95,7 +95,7 @@ function displayFridays(){
 displayFridays();
 
 // Exercício 6:
-function changeTextSize () {
+function changeTextSize() {
     const dayList = document.querySelectorAll('.day');
     for (let index = 0; index < dayList.length; index += 1) {
         dayList[index].addEventListener('mouseover', function(event) {
@@ -108,3 +108,15 @@ function changeTextSize () {
     }
 }
 changeTextSize()
+
+// Exercício 7:
+function createTask(string) {
+    let task = document.createElement('span');
+    task.innerHTML = string
+    let getMyTasks = document.querySelector('.my-tasks');
+    getMyTasks.appendChild(task)
+
+
+}
+createTask('Projeto: ')
+
