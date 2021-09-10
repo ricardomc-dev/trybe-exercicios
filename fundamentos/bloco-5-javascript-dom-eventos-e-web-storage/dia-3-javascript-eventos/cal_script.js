@@ -112,11 +112,18 @@ changeTextSize()
 // Exercício 7:
 function createTask(string) {
     let task = document.createElement('span');
-    task.innerHTML = string
+    task.innerHTML = string;
     let getMyTasks = document.querySelector('.my-tasks');
-    getMyTasks.appendChild(task)
-
-
+    getMyTasks.appendChild(task);
 }
 createTask('Projeto: ')
 
+// Exercício 8:
+function colorLegend(color) {
+    let colorTask = document.createElement('div');
+    colorTask.style.backgroundColor = color;
+    colorTask.className = 'task';
+    let getMyTasks = document.querySelector('.my-tasks');
+    getMyTasks.appendChild(colorTask);
+}
+colorLegend('yellow');
