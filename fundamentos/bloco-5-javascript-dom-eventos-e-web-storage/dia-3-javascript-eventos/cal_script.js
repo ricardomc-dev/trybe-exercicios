@@ -117,6 +117,7 @@ function createTask(string) {
     getMyTasks.appendChild(task);
 }
 createTask('Projeto: ')
+createTask('Cozinhar: ')
 
 // Exercício 8:
 function colorLegend(color) {
@@ -127,3 +128,36 @@ function colorLegend(color) {
     getMyTasks.appendChild(colorTask);
 }
 colorLegend('yellow');
+
+// Exercício 9:
+function createTaskSelect() {
+    let getColorTask = document.querySelector('.task');
+    getColorTask.addEventListener('click', function(event) {
+        //event.target.classList.toggle('Selected');
+        if (event.target.classList.length === 1) {
+            event.target.classList.add('Selected');
+        } else {event.target.classList.remove('Selected')}
+    })
+}
+createTaskSelect()
+
+// Exercício 10:
+function changeBackgroundColorDays() {
+    // recuperar os dias
+    let days = document.querySelector('.day');
+    // fazer um for para passar o eventListener para todos os dias
+    for (let index = 0; index < days.length; index += 1){
+        days[index].addEventListener('click', function(event) {
+            // recuperar a bolinha quando tiver com a classe .selected
+            let selectedTask = document.querySelector('.selected');
+            // recuperar a cor
+            let color = selectedTask.style.backgroundColor;
+            if(event.target.style.color === color) {
+                event.target.style.color = 'rgb(119,119,119)';
+            } else {
+                event.target.style.color = color;
+            }
+        });
+    }
+}
+changeBackgroundColorDays();
