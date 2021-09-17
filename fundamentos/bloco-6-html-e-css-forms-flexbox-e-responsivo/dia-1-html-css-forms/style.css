@@ -1,0 +1,30 @@
+body {
+  background-color:azure;
+  max-width: 80%;
+  margin: 5% 10%;
+  border: 1px solid #D3D3D3;
+}
+/* header {
+  text-align: center;
+  padding: 40px;
+
+} */
+.line-content {
+  margin-top: 30px;
+}
+.field{
+  max-width: 92%;
+  margin-left: 4%;
+  margin-top: 10px;
+}
+.button{
+  padding:20px;
+  margin: 20px 0px;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+#email-box, #city-box {
+  width:100%;
+}
