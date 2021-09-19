@@ -24,7 +24,10 @@ body {
 .flex-container {
   display: flex;
   justify-content: space-between;
+  
 }
-#email-box, #city-box {
-  width:100%;
+.flex-container div:nth-child(1){
+  flex-grow: 1 ;
 }
+
+
