@@ -4,3 +4,15 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
+@media screen and (max-width: 400px) {
+  
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+  
+}
+
+@media screen and (min-width: 800px) {
+  
+}
