@@ -76,10 +76,10 @@ assert.strictEqual(authorBornIn1947(), 'Stephen King');
 // 2 - Retorne o nome do livro de menor nome.
 
 function smallerName() {
-  let nameBook;
+  let nameBook = books[0].name;
   
-  books.forEach((book) => {
-    if (!nameBook || book.name.length < nameBook.length) {
+  books.forEach(book => {
+    if (book.name.length < nameBook.length) {
       nameBook = book.name;
     }
   });
@@ -183,12 +183,14 @@ assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult6);
 
 // 7 - Faça uma função que retorne true , caso nenhum author tenha nascido no mesmo ano, e false , caso contrário.
 
-const expectedResult = false;
+const expectedResult7 = false;
 
 function authorUnique() {
-  books.some((bookA, bookB) => {
-    bookA.author.birthYear === bookB.author.birthYear
+  return books.every((bookA) => {
+    !books.some((bookB) => {
+      bookA.author.birthYear === bookB.author.birthYear && bookA.author.name !== bookB.author.name
+    })
   });
 }
 
-assert.strictEqual(authorUnique(), expectedResult);
+assert.strictEqual(authorUnique(), expectedResult7);
