@@ -129,12 +129,11 @@ function oldBooks() {
 // 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
 
 function authorWith3DotsOnName() {
-  //console.log(books[1].author.name.split(' ')[3].endsWith('.'));
-  return books.find((book) => (
-    book.author.name.split(' ')[0].endsWith('.') &&
+  return books.find((book) => {
+    return book.author.name.split(' ')[0].endsWith('.') &&
     book.author.name.split(' ')[1].endsWith('.') &&
     book.author.name.split(' ')[2].endsWith('.')
-  )).name;
+  }).name;
   
 }
 
