@@ -59,27 +59,31 @@ const getPlanet = () => {
 
 // 6 - Por fim, o robô Curiosity tem uma taxa de sucesso de envio de mensagem de 60% devido ao fato de o robô já estar muito ocupado com outras operações. Logo, adicione na função sendMarsTemperature um outro callback que contenha as ações a serem tomadas em caso de falha.
 
-const messageDelay = () => Math.floor(Math.random() * 5000);
+// const messageDelay = () => Math.floor(Math.random() * 5000);
 
-const getMarsTemperature = () => {
-  const maxTemperature = 58;
-  return Math.floor(Math.random() * maxTemperature);
-}
+// const getMarsTemperature = () => {
+//   const maxTemperature = 58;
+//   return Math.floor(Math.random() * maxTemperature);
+// }
 
-const toFahrenheit = (degreeCelsius) => (degreeCelsius * 9/5) + 32;
+// const toFahrenheit = (degreeCelsius) => (degreeCelsius * 9/5) + 32;
 
-const temperatureInFahrenheit = (temperature) =>
-  console.log(`It is currently ${toFahrenheit(temperature)}ºF at Mars`);
+// const temperatureInFahrenheit = (temperature) =>
+//   console.log(`It is currently ${toFahrenheit(temperature)}ºF at Mars`);
 
-const greet = (temperature) =>
-  console.log(`Hi there! Curiosity here. Right now is ${temperature}ºC at Mars`);
+// const greet = (temperature) =>
+//   console.log(`Hi there! Curiosity here. Right now is ${temperature}ºC at Mars`);
 
-const handleError = (errorReason) =>
-  console.log(`Error getting temperature: ${errorReason}`);
+// const handleError = (errorReason) =>
+//   console.log(`Error getting temperature: ${errorReason}`);
 
-  const sendMarsTemperature = (callback, error) => {
-    setTimeout(() => callback(getMarsTemperature()), messageDelay()) 
-  }
+//   const sendMarsTemperature = (onSuccess, onError) => {
+//     const didOperationSucceed = Math.random() >= 0.4;
+//     setTimeout(() => {
+//       if (didOperationSucceed) onSuccess(getMarsTemperature())
+//       else onError('Robot is busy')
+//     }, messageDelay())
+//   }
 
 // imprime "It is currently 47ºF at Mars", por exemplo, ou "Error getting temperature: Robot is busy"
 //sendMarsTemperature(temperatureInFahrenheit, handleError);
@@ -95,43 +99,49 @@ const uppercase = (str, callback) => {
   }, 500);
 };
 
+it('uppercase "test" to equal "TEST",() => {
+  uppercase('test', (str) => {
+    expect(str).toBe('TEST')
+  })
+})
+
 //8 - Para o próximo exercício, você vai sentir na pele o primeiro dia de um treinador Pokémon! No laboratório do Professor Carvalho, você é informado de que existem três pokémons disponíveis: Bulbasaur, Charmander e Squirtle. Complete a chamada da função getPokemonDetails de modo que ela imprima no console os detalhes do pokémon que você escolheu. PS: é possível que o sistema do Professor Carvalho apresente erros caso o pokémon não exista no banco de dados, então não se esqueça de tratá-los também, combinado?
 
-const pokemons = [
-  {
-    name: 'Bulbasaur',
-    type: 'Grass',
-    ability: 'Razor Leaf',
-  },
-  {
-    name: 'Charmander',
-    type: 'Fire',
-    ability: 'Ember',
-  },
-  {
-    name: 'Squirtle',
-    type: 'Water',
-    ability: 'Water Gun',
-  },
-];
+// const pokemons = [
+//   {
+//     name: 'Bulbasaur',
+//     type: 'Grass',
+//     ability: 'Razor Leaf',
+//   },
+//   {
+//     name: 'Charmander',
+//     type: 'Fire',
+//     ability: 'Ember',
+//   },
+//   {
+//     name: 'Squirtle',
+//     type: 'Water',
+//     ability: 'Water Gun',
+//   },
+// ];
 
-function getPokemonDetails(filter, callback) {
-  setTimeout(() => {
-    if (pokemons.find(filter) === undefined) {
-      return callback(new Error('Não temos esse pokémon para você :('), null);
-    }
-    const pokemon = pokemons.find(filter);
+// function getPokemonDetails(filter, callback) {
+//   setTimeout(() => {
+//     if (pokemons.find(filter) === undefined) {
+//       return callback(new Error('Não temos esse pokémon para você :('), null);
+//     }
+//     const pokemon = pokemons.find(filter);
 
-    const { name, type, ability } = pokemon;
+//     const { name, type, ability } = pokemon;
 
-    const messageFromProfOak = `Olá, seu pokémon é o ${name}, o tipo dele é ${type} e a habilidade principal dele é ${ability}`;
+//     const messageFromProfOak = `Olá, seu pokémon é o ${name}, o tipo dele é ${type} e a habilidade principal dele é ${ability}`;
 
-    callback(null, messageFromProfOak);
-  }, 2000);
-}
+//     callback(null, messageFromProfOak);
+//   }, 2000);
+// }
 
-getPokemonDetails();
+// getPokemonDetails();
 
-module.exports = {
-  getPokemonDetails,
-};
+// module.exports = {
+//   getPokemonDetails,
+// };
