@@ -1,0 +1,29 @@
+.header {
+  background-color: coral;
+  color: white;
+  padding: 2px;
+}
+
+.footer {
+  background-color: coral;
+  color: white;
+  padding: 2px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: khaki;
+  width: 250px;
+  text-align: center;
+  border-radius: 5%;
+
+}
