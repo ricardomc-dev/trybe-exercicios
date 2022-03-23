@@ -2,10 +2,10 @@
 
 /*
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let sum = 0
-for (let i = 0; i < numbers.length; i+=1){
-    sum = sum + numbers[i]  
-} 
+
+for (let index = 0; index < numbers.length; index += 1) {
+  console.log(numbers[index]);
+}
 */
 
 //Para o segundo exercício, some todos os valores contidos no array e imprima o resultado;
@@ -54,7 +54,7 @@ console.log(maiorValor)*/
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let nOdd = 0
 for (let i = 0; i < numbers.length; i+=1){
-    if (numbers[i] % 2 != 0){
+    if (numbers[i] % 2 !== 0){
         nodd += 1
     } 
 } 
@@ -67,7 +67,7 @@ let menorValor = numbers[0]
 for (let i = 1; i < numbers.length; i+=1){
     if (numbers[i] < menorValor){
         menorValor = numbers[i]
-    } console.log(menorValor)
+    } 
 } 
 console.log(menorValor)*/
 
