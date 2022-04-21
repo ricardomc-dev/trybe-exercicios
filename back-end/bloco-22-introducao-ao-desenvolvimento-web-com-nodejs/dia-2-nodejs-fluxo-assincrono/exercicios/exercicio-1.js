@@ -9,7 +9,8 @@ function calcNumeros (num1, num2, num3) {
   })
 }
 
-calcNumeros("teste", 1, 5)
-  .then(result => console.log(result))
-  .catch(err => console.log(`erro: ${err.message}`));
-  
+// calcNumeros("teste", 1, 5)
+//   .then(result => console.log(result))
+//   .catch(err => console.log(`erro: ${err.message}`));
+
+module.exports = calcNumeros;
